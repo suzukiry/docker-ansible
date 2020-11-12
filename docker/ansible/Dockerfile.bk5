@@ -1,4 +1,5 @@
 FROM centos:7
+LABEL maintainer="Jeff Geerling"
 ENV container=docker
 
 ENV pip_packages "ansible"
@@ -23,9 +24,6 @@ RUN yum makecache fast \
       which \
       python-pip \
  && yum clean all
-
-RUN yum -y install openssh-clients
-RUN yum install sshpass
 
 # Install Ansible via Pip.
 RUN pip install $pip_packages
