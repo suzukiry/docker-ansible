@@ -1,0 +1,2 @@
+target1 ansible_host=target01 ansible_ssh_pass=password
+target2 ansible_host=target02 ansible_ssh_pass=password
