@@ -7,12 +7,31 @@ services:
     working_dir: "/var/data"
     volumes:
       - .:/var/data
-  
+    privileged: true
+    command: /sbin/init 
   target01:
     container_name: target01
     build: docker/target
     tty: true
+    privileged: true
+    command: /sbin/init 
+
   target02:
     container_name: target02
     build: docker/target
+    tty: true
+    privileged: true
+    command: /sbin/init 
+
+  target03:
+    container_name: target03
+    build: docker/target-ubuntu
+    tty: true
+  target04:
+    container_name: target04
+    build: docker/target-ubuntu
+    tty: true
+  target05:
+    container_name: target05
+    build: docker/target-ubuntu
     tty: true

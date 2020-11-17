@@ -1,0 +1,4 @@
+[db_and_web_servers]
+db_and_web_server3 ansible_host=target03 ansible_ssh_pass=Passw0rd
+db_and_web_server4 ansible_host=target04 ansible_ssh_pass=Passw0rd
+

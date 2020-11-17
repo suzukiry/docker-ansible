@@ -25,7 +25,7 @@ RUN yum makecache fast \
  && yum clean all
 
 RUN yum -y install openssh-clients
-RUN yum install sshpass
+RUN yum -y install sshpass
 
 # Install Ansible via Pip.
 RUN pip install $pip_packages
